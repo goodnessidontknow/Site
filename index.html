@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Slater</title>
+        <meta charset="utf-8">
+        <meta name="author" content="John Slater">
+        <meta property="og:title" content="Slater">
+        <meta property="og:type" content="website">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="t.min.js"></script>
+    </head>
+    <body id="body" style="background-color: #000000;" onload="typeTextMain()">
+        <div style="width:360px;">
+            <p id="one"></p>
+        </div>
+        <div style="width:234.05px;">
+            <p id="two"></p>
+        </div>
+        <footer id="three" style="width:358.86px;"></footer>
+    </body>
+
+    <style>
+        p, footer {
+            white-space: pre;
+            font-family: monospace;
+            color: #00FF00;
+        }
+
+        div, footer {
+            margin: auto
+        }
+    </style>
+
+    <script>
+            $('#one').t(' ______         _____ _________ ______  ______\n|______ |      |_____|    |    |______ |_____/\n______| |_____ |     |    |    |______ |    \\_',
+                {speed:15,beep:true,caret:true,blink:false,fin:()=>{
+                $('.t-caret').remove();
+                $('#two').t('        ______\n       /     /\\\n      /     /  \\\n     /_____/----\\_    (\n    "     "          ).\n   _ ___          o (:\') o\n  (@))_))        o ~/~~\\~ o\n                   o  o  o',
+                {speed:0.1,beep:true,caret:true,blink:false, fin:()=>{
+                    $('.t-caret').remove();
+                    $('#three').t('slater26@purdue.edu\ngithub: goodnessidontknow\nlinkedin: john-jack-slater\nig: ___slater\ndiscord: Niobrara#9982\n\n', {speed:15,beep:true,caret:true,blink:false,fin:()=>{
+                        setTimeout({}, 500)
+                        selectionMain();
+                    }})
+                }})
+            }})
+        </script>
+</html>
